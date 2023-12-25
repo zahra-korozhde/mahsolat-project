@@ -1,15 +1,18 @@
 const searchInput = document.getElementById("search-input");
 const products = document.querySelectorAll(".product-item");
 const buttons = document.querySelectorAll(".filter");
-const changeClass = (filter) =>{
-    buttons.forEach(button =>{
-        if(button.dataset.filter === filter){
-            button.classList.add("selected");
-        }else{
-            button.classList.remove("selected");
-        }
-    })
-}
+const priceDiv = document.getElementById("search-price");
+const priceButton = priceDiv.querySelector("button");
+
+const changeClass = (filter) => {
+  buttons.forEach((button) => {
+    if (button.dataset.filter === filter) {
+      button.classList.add("selected");
+    } else {
+      button.classList.remove("selected");
+    }
+  });
+};
 
 const searchHandler = (event) => {
   const saerchValue = event.target.value.toLowerCase().trim();
@@ -38,7 +41,22 @@ const filterHandler = (event) => {
       filter === category
         ? (product.style.display = "block")
         : (product.style.display = "none");
-       
+    }
+  });
+};
+
+const searchPriceHandler = (event) => {
+  const searchPrice = +event.target.parentElement.children[0].value;
+
+  products.forEach((product) => {
+    const productPrice = product.children[2].innerText;
+    const price = productPrice.split()[1];
+    if (!searchPrice) {
+      product.style.display = "block";
+    } else {
+      searchPrice === price
+        ? (product.style.display = "block")
+        : (product.style.style.display = "none");
     }
   });
 };
@@ -46,3 +64,5 @@ const filterHandler = (event) => {
 buttons.forEach((button) => {
   button.addEventListener("click", filterHandler);
 });
+
+priceButton.addEventListener("click", searchPriceHandler);
