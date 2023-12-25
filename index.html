@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sarvenaz mahsolat</title>
     <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
     <header>
@@ -14,10 +15,10 @@
         <div id="search">
             <input placeholder="search name" name="" id="search-input" type="text">
              <div>
-                <button class="filter">all</button>
-                <button class="filter">tech</button>
-                <button class="filter">clothing </button>
-                <button class="filter">health</button>
+                <button class="filter selected "  data-filter="all">all</button>
+                <button class="filter selected " data-filter ="tech">tech</button>
+                <button class="filter selected " data-filter ="clothing">clothing </button>
+                <button class="filter selected " data-filter="health">health</button>
 
              </div>
              <div>
@@ -27,54 +28,54 @@
         </div>
 
         <div id="products">
-            <div class="product-item">
+            <div class="product-item" data-category="tech">
                 <img src="./img/gallery-1-TLP-5938_d7698252-1cd0-4deb-9a61-15f26e65dd02.webp" alt="">
                 <p> Apple iphone 14 pro</p>
                 <span> $1499</span>
             </div>
             <!-- ...................... -->
-            <div class="product-item">
+            <div class="product-item"  data-category="clothing">
                 <img src="./img/Shoes.avif" alt="">
                 <p> Running shoes</p>
                 <span> $199</span>
             </div>
             <!-- .................... -->
-            <div class="product-item">
+            <div class="product-item"  data-category="tech">
                 <img src="./img/watch.webp" alt="">
                 <p> Apple watch</p>
                 <span> $399</span>
             </div>
             <!-- ................. -->
-            <div class="product-item">
+            <div class="product-item"  data-category="clothing">
                 <img src="./img/laptop_bag.jpg" alt="">
                 <p> collage bag</p>
                 <span> $139</span>
             </div>
             <!-- ............... -->
-            <div class="product-item">
+            <div class="product-item"  data-category="clothing">
                 <img src="./img/کاپشن.jpg" alt="">
                 <p> boy's jacet</p>
                 <span> $169</span>
             </div>
             <!-- .............. -->
-            <div class="product-item">
+            <div class="product-item"  data-category="health">
                 <img src="./img/shampo.jpg" alt="">
                 <p> keratin hair care</p>
                 <span> $39</span>
             </div>
             <!-- ............. -->
-            <div class="product-item">
+            <div class="product-item"  data-category="tech">
                 <img src="./img/AIR.jpg" alt="">
                 <p> Apple airpods pro</p>
                 <span> $299</span>
             </div>
             <!-- .......... -->
-            <div class="product-item">
+            <div class="product-item"  data-category="health">
                 <img src="./img/drug.jpg" alt="">
                 <p> vitamin E</p>
                 <span> $39</span>
             </div>
-            <div class="product-item">
+            <div class="product-item"  data-category="health">
                 <img src="./img/kerem.webp" alt="">
                 <p> Face Cream</p>
                 <span> $39</span>
